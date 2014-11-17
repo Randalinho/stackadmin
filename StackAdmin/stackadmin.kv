@@ -1,0 +1,43 @@
+<MainView>:
+	lblLabel: lblLabel
+
+    do_default_tab: False
+    tab_pos: 'top_mid'
+    tab_width: 150
+
+    TabbedPanelItem:
+        text: 'Versionen'
+        GridLayout:
+        	cols: 2
+        	Label:
+            	text: 'Zeile 1 / Spalte 1'
+            Label:
+            	text: 'Zeile 1 / Spalte 2'
+            Label:
+            	text: 'Zeile 2 / Spalte 1'
+            Label:
+            	text: 'Zeile 2 / Spalte 2'
+            	
+    TabbedPanelItem:
+        text: 'Jobs'
+        BoxLayout:
+            Label:
+            	id: lblLabel
+                text: 'bla bla bla'
+            Button:
+            	id: btnTest
+                text: 'Text aendern!'
+                on_release: root.btnTestClick()
+                
+	TabbedPanelItem:
+        text: 'Einstellungen'
+        GridLayout:
+        	cols: 2
+        	Label:
+            	text: 'Zeile 1 / Spalte 1'
+            Label:
+            	text: 'Zeile 1 / Spalte 2'
+            Label:
+            	text: 'Zeile 2 / Spalte 1'
+            Label:
+            	text: 'Zeile 2 / Spalte 2'

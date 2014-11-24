@@ -8,15 +8,62 @@
     TabbedPanelItem:
         text: 'Versionen'
         GridLayout:
-        	cols: 2
+        	cols: 1
         	Label:
-            	text: 'Zeile 1 / Spalte 1'
-            Label:
-            	text: 'Zeile 1 / Spalte 2'
-            Label:
-            	text: 'Zeile 2 / Spalte 1'
-            Label:
-            	text: 'Zeile 2 / Spalte 2'
+        		font_size: 20
+        		bold: True
+        		text: 'Versionen'
+        		size_hint_y: None
+        		height: 50
+        	GridLayout:
+				cols: 3
+				BoxLayout:
+					orientation: 'vertical'
+					Label:
+						text: 'Verfügbare Modellreihen:'
+					TextInput:
+						id: txtModellReihenFilter
+					ListView:
+						item_strings: 'A119', 'W220', 'X110'
+					Button:
+						text: 'Modell öffnen'
+				BoxLayout:
+					orientation: 'vertical'
+					padding: 10
+					Label:
+						text: 'Modell-Details:'
+					GridLayout:
+						cols: 2
+						Label:
+							text: 'Hersteller:'
+						Label:
+							text: 'Mercedes Benz'
+						Label:
+							text: 'Modellbezeichnung:'
+						Label:
+							text: 'A119'
+						Label:
+							text: 'Bezeichnung:'
+						Label:
+							text: 'A-Klasse, 1.9 Liter'
+						Label:
+							text: 'Erste Version:'
+						Label:
+							text: '23.09.1024'
+						Label:
+							text: 'Ersteller:'
+						Label:
+							text: 'René Brixel'
+				BoxLayout:
+					orientation: 'vertical'
+					Label:
+						text: 'Funktionen:'
+					Button:
+						text: 'Checkout'
+					Button:
+						text: 'Sync to head'
+					Button:
+						text: 'Package'
             	
     TabbedPanelItem:
         text: 'Jobs'

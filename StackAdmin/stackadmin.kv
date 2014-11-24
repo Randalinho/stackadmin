@@ -19,8 +19,11 @@
 				cols: 3
 				BoxLayout:
 					orientation: 'vertical'
+					size_hint_y: None
+        			height: 200
 					Label:
 						text: 'Verfügbare Modellreihen:'
+						valign: 'top'
 					TextInput:
 						id: txtModellReihenFilter
 					ListView:
@@ -30,8 +33,11 @@
 				BoxLayout:
 					orientation: 'vertical'
 					padding: 10
+					size_hint_y: None
+        			height: 200
 					Label:
 						text: 'Modell-Details:'
+						valign: 'top'
 					GridLayout:
 						cols: 2
 						Label:
@@ -39,12 +45,14 @@
 						Label:
 							text: 'Mercedes Benz'
 						Label:
-							text: 'Modellbezeichnung:'
+							text: 'Modellbez.:'
 						Label:
 							text: 'A119'
 						Label:
 							text: 'Bezeichnung:'
 						Label:
+							#size_hint: None, None
+							#halign: 'left'
 							text: 'A-Klasse, 1.9 Liter'
 						Label:
 							text: 'Erste Version:'
@@ -56,7 +64,10 @@
 							text: 'René Brixel'
 				BoxLayout:
 					orientation: 'vertical'
+					size_hint_y: None
+        			height: 200
 					Label:
+						valign: 'top'
 						text: 'Funktionen:'
 					Button:
 						text: 'Checkout'

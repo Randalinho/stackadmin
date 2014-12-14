@@ -2,7 +2,15 @@
 <?eclipse-pydev version="1.0"?><pydev_project>
 <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
 <path>/${PROJECT_DIR_NAME}</path>
+<path>/${PROJECT_DIR_NAME}/setuptools-git-1.1</path>
+<path>/${PROJECT_DIR_NAME}/smmap-0.8.3</path>
+<path>/${PROJECT_DIR_NAME}/gitdb</path>
+<path>/${PROJECT_DIR_NAME}/GitPython-0.3.2.1</path>
 </pydev_pathproperty>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 2.7</pydev_property>
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">Python Kivy</pydev_property>
+<pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
+<path>E:\Markus\Dropbox\Studium\6. Semester\Software Engineering Projekt\GitPython-0.3.2.tar.gz</path>
+<path>C:\Users\Markus Schmieder\AppData\Local\GitHub</path>
+</pydev_pathproperty>
 </pydev_project>

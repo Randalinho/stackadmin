@@ -1,4 +1,6 @@
 #import kivy
+#from gitdb import *
+from git import *
 from kivy.app import App
 from kivy.uix.tabbedpanel import TabbedPanel
 from kivy.properties import ObjectProperty  # @UnresolvedImport

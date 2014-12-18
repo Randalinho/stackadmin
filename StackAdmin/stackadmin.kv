@@ -90,12 +90,24 @@
 	TabbedPanelItem:
         text: 'Einstellungen'
         GridLayout:
-        	cols: 2
+        	cols: 3
+        	
         	Label:
-            	text: 'Zeile 1 / Spalte 1'
-            Label:
-            	text: 'Zeile 1 / Spalte 2'
-            Label:
-            	text: 'Zeile 2 / Spalte 1'
-            Label:
-            	text: 'Zeile 2 / Spalte 2'
+            	text: 'Lokaler Pfad:'
+            TextInput:
+				id: txtLocalPath
+			Button:
+            	id: btnLocalPath
+                text: 'Pfad aendern'
+                
+			Label:
+				text: 'Eigener Vorname/Nachname:'
+            TextInput:
+				id: txtForename
+			TextInput:
+				id: txtLastname
+				
+			Button:
+				id: btnSettingsSave
+				text: 'Einstellungen speichern'
+			

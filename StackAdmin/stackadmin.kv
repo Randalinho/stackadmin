@@ -1,5 +1,8 @@
 <MainView>:
 	lblLabel: lblLabel
+	txtLocalPath: txtLocalPath
+	txtForename: txtForename
+	txtLastname: txtLastname
 
     do_default_tab: False
     tab_pos: 'top_mid'
@@ -99,6 +102,7 @@
 			Button:
             	id: btnLocalPath
                 text: 'Pfad aendern'
+                on_release: root.show_load()
                 
 			Label:
 				text: 'Eigener Vorname/Nachname:'
@@ -110,4 +114,24 @@
 			Button:
 				id: btnSettingsSave
 				text: 'Einstellungen speichern'
+				on_release: root.btnConfigSave()
 			
+<LoadDialog>:
+	BoxLayout:
+		size: root.size
+		pos: root.pos
+		orientation: "vertical"
+		FileChooserListView:
+			id: filechooser
+			dirselect: 'True'
+
+		BoxLayout:
+			size_hint_y: None
+			height: 30
+			Button:
+				text: "Abbruch"
+				on_release: root.cancel()
+
+			Button:
+				text: "Oeffnen"
+				on_release: root.load(filechooser.path)

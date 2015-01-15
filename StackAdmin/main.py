@@ -57,7 +57,7 @@ class MainView(TabbedPanel):
         content = LoginScreen(login=self.login, cancel=self.dismiss_popup)
         self._popup = Popup(title="LOGIN", content=content, size_hint=(0.9, 0.9))
         self._popup.open()
-
+        
     def load(self, path):
         verzeichnis = ""
         verzeichnis = os.path.normpath(path)

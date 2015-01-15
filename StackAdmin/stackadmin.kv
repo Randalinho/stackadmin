@@ -135,3 +135,16 @@
 			Button:
 				text: "Oeffnen"
 				on_release: root.load(filechooser.path)
+				
+				
+<LoginScreen>:
+	BoxLayout:
+		Label:
+			text: 'Benutzername:'
+		TextInput:
+			id: txtLoginUser
+		Label:
+			text: 'Passwort:'
+		TextInput:
+			id: txtLoginPass
+			password: 'True'

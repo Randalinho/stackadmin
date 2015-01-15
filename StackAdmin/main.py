@@ -12,6 +12,19 @@ from kivy.properties import ObjectProperty  # @UnresolvedImport
 
 import os
 store = JsonStore('stackadmin_config.json')
+loginSet = 'False'
+
+class LoginScreen(FloatLayout):
+    #txtLoginName = ObjectProperty(None)
+    #txtLoginPass = ObjectProperty(None)
+    
+    def checkLogin(self):
+        username = self.ids.txtLoginUser.text
+        password = self.ids.txtLoginPass.text
+        
+        if (username == 'rene' and password == 'test'):
+            loginSet = 'True'
+            return MainView()
 
 class LoadDialog(FloatLayout):
     load = ObjectProperty(None)
@@ -39,12 +52,20 @@ class MainView(TabbedPanel):
         content = LoadDialog(load=self.load, cancel=self.dismiss_popup)
         self._popup = Popup(title="Waehle lokales GIT-Verzeichnis", content=content, size_hint=(0.9, 0.9))
         self._popup.open()
+        
+    def show_login(self):
+        content = LoginScreen(login=self.login, cancel=self.dismiss_popup)
+        self._popup = Popup(title="LOGIN", content=content, size_hint=(0.9, 0.9))
+        self._popup.open()
 
     def load(self, path):
         verzeichnis = ""
         verzeichnis = os.path.normpath(path)
         if verzeichnis != "":
             self.ids.txtLocalPath.text = verzeichnis
+        self.dismiss_popup()
+        
+    def login(self):
         self.dismiss_popup()
         
     # "Konstruktor":
@@ -55,6 +76,10 @@ class MainView(TabbedPanel):
     
         if store.exists('localGit'):
             self.ids.txtLocalPath.text = store.get('localGit')['path']
+            
+        if (loginSet == 'False'):
+            self.show_login()
+            
 
 class StackAdminApp(App):
     def build(self):

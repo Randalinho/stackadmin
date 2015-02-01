@@ -31,8 +31,13 @@ class LoadDialog(FloatLayout):
     cancel = ObjectProperty(None)
 
 class MainView(TabbedPanel):
-    #repo = Repo("/Users/Markus Schmieder/Documents/GitHub/StackAdmin_Rep")
-    #assert repo.bare == False
+    repo = Repo("/Users/Markus Schmieder/Documents/GitHub/StackAdmin_Rep")
+    assert repo.bare == False
+    
+    print repo.commit('master').author
+    print repo.commit('master').message
+    
+
 
     def btnTestClick(self):
         self.ids.lblLabel.text = "--- Geandert! ---"
